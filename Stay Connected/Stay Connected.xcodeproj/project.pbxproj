@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		5A98BDF12CFC3BE300067DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A98BDD22CFC3BE100067DDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A98BDD92CFC3BE100067DDE;
+			remoteInfo = "Stay Connected";
+		};
+		5A98BDFB2CFC3BE300067DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A98BDD22CFC3BE100067DDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A98BDD92CFC3BE100067DDE;
+			remoteInfo = "Stay Connected";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A98BDDA2CFC3BE100067DDE /* Stay Connected.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stay Connected.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A98BDF02CFC3BE300067DDE /* Stay ConnectedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stay ConnectedTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A98BDFA2CFC3BE300067DDE /* Stay ConnectedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stay ConnectedUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5A98BE022CFC3BE300067DDE /* Exceptions for "Stay Connected" folder in "Stay Connected" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5A98BDD92CFC3BE100067DDE /* Stay Connected */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5A98BDDC2CFC3BE100067DDE /* Stay Connected */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A98BE022CFC3BE300067DDE /* Exceptions for "Stay Connected" folder in "Stay Connected" target */,
+			);
+			path = "Stay Connected";
+			sourceTree = "<group>";
+		};
+		5A98BDF32CFC3BE300067DDE /* Stay ConnectedTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stay ConnectedTests";
+			sourceTree = "<group>";
+		};
+		5A98BDFD2CFC3BE300067DDE /* Stay ConnectedUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Stay ConnectedUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A98BDD72CFC3BE100067DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDED2CFC3BE300067DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDF72CFC3BE300067DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A98BDD12CFC3BE100067DDE = {
+			isa = PBXGroup;
+			children = (
+				5A98BDDC2CFC3BE100067DDE /* Stay Connected */,
+				5A98BDF32CFC3BE300067DDE /* Stay ConnectedTests */,
+				5A98BDFD2CFC3BE300067DDE /* Stay ConnectedUITests */,
+				5A98BDDB2CFC3BE100067DDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A98BDDB2CFC3BE100067DDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A98BDDA2CFC3BE100067DDE /* Stay Connected.app */,
+				5A98BDF02CFC3BE300067DDE /* Stay ConnectedTests.xctest */,
+				5A98BDFA2CFC3BE300067DDE /* Stay ConnectedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A98BDD92CFC3BE100067DDE /* Stay Connected */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A98BE032CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay Connected" */;
+			buildPhases = (
+				5A98BDD62CFC3BE100067DDE /* Sources */,
+				5A98BDD72CFC3BE100067DDE /* Frameworks */,
+				5A98BDD82CFC3BE100067DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5A98BDDC2CFC3BE100067DDE /* Stay Connected */,
+			);
+			name = "Stay Connected";
+			packageProductDependencies = (
+			);
+			productName = "Stay Connected";
+			productReference = 5A98BDDA2CFC3BE100067DDE /* Stay Connected.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A98BDEF2CFC3BE300067DDE /* Stay ConnectedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A98BE082CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay ConnectedTests" */;
+			buildPhases = (
+				5A98BDEC2CFC3BE300067DDE /* Sources */,
+				5A98BDED2CFC3BE300067DDE /* Frameworks */,
+				5A98BDEE2CFC3BE300067DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A98BDF22CFC3BE300067DDE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5A98BDF32CFC3BE300067DDE /* Stay ConnectedTests */,
+			);
+			name = "Stay ConnectedTests";
+			packageProductDependencies = (
+			);
+			productName = "Stay ConnectedTests";
+			productReference = 5A98BDF02CFC3BE300067DDE /* Stay ConnectedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A98BDF92CFC3BE300067DDE /* Stay ConnectedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A98BE0B2CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay ConnectedUITests" */;
+			buildPhases = (
+				5A98BDF62CFC3BE300067DDE /* Sources */,
+				5A98BDF72CFC3BE300067DDE /* Frameworks */,
+				5A98BDF82CFC3BE300067DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A98BDFC2CFC3BE300067DDE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5A98BDFD2CFC3BE300067DDE /* Stay ConnectedUITests */,
+			);
+			name = "Stay ConnectedUITests";
+			packageProductDependencies = (
+			);
+			productName = "Stay ConnectedUITests";
+			productReference = 5A98BDFA2CFC3BE300067DDE /* Stay ConnectedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A98BDD22CFC3BE100067DDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					5A98BDD92CFC3BE100067DDE = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					5A98BDEF2CFC3BE300067DDE = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 5A98BDD92CFC3BE100067DDE;
+					};
+					5A98BDF92CFC3BE300067DDE = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 5A98BDD92CFC3BE100067DDE;
+					};
+				};
+			};
+			buildConfigurationList = 5A98BDD52CFC3BE100067DDE /* Build configuration list for PBXProject "Stay Connected" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A98BDD12CFC3BE100067DDE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5A98BDDB2CFC3BE100067DDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A98BDD92CFC3BE100067DDE /* Stay Connected */,
+				5A98BDEF2CFC3BE300067DDE /* Stay ConnectedTests */,
+				5A98BDF92CFC3BE300067DDE /* Stay ConnectedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A98BDD82CFC3BE100067DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDEE2CFC3BE300067DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDF82CFC3BE300067DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A98BDD62CFC3BE100067DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDEC2CFC3BE300067DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A98BDF62CFC3BE300067DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A98BDF22CFC3BE300067DDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A98BDD92CFC3BE100067DDE /* Stay Connected */;
+			targetProxy = 5A98BDF12CFC3BE300067DDE /* PBXContainerItemProxy */;
+		};
+		5A98BDFC2CFC3BE300067DDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A98BDD92CFC3BE100067DDE /* Stay Connected */;
+			targetProxy = 5A98BDFB2CFC3BE300067DDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A98BE042CFC3BE300067DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stay Connected/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-Connected";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A98BE052CFC3BE300067DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stay Connected/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-Connected";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A98BE062CFC3BE300067DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A98BE072CFC3BE300067DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A98BE092CFC3BE300067DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-ConnectedTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stay Connected.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stay Connected";
+			};
+			name = Debug;
+		};
+		5A98BE0A2CFC3BE300067DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-ConnectedTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stay Connected.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stay Connected";
+			};
+			name = Release;
+		};
+		5A98BE0C2CFC3BE300067DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-ConnectedUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Stay Connected";
+			};
+			name = Debug;
+		};
+		5A98BE0D2CFC3BE300067DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Riviansoft.Stay-ConnectedUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Stay Connected";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A98BDD52CFC3BE100067DDE /* Build configuration list for PBXProject "Stay Connected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A98BE062CFC3BE300067DDE /* Debug */,
+				5A98BE072CFC3BE300067DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A98BE032CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay Connected" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A98BE042CFC3BE300067DDE /* Debug */,
+				5A98BE052CFC3BE300067DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A98BE082CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay ConnectedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A98BE092CFC3BE300067DDE /* Debug */,
+				5A98BE0A2CFC3BE300067DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A98BE0B2CFC3BE300067DDE /* Build configuration list for PBXNativeTarget "Stay ConnectedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A98BE0C2CFC3BE300067DDE /* Debug */,
+				5A98BE0D2CFC3BE300067DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A98BDD22CFC3BE100067DDE /* Project object */;
+}
