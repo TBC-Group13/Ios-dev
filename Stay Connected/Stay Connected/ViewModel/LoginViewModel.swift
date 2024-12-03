@@ -16,6 +16,8 @@ class LoginViewModel {
     // Outputs
     @Published private(set) var isLoginEnabled: Bool = false
     @Published private(set) var errorMessage: String?
+    
+    @Published private(set) var loggedInUser: User?
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -32,6 +34,7 @@ class LoginViewModel {
     func login(completion: @escaping (Bool) -> Void) {
         // Mock validation for username "123" and password "123"
         if email == "123" && password == "123" {
+            self.loggedInUser = User(id: 1, email: "123", profileImageUrl: nil)
             completion(true)
         } else {
             errorMessage = "Invalid email or password"
