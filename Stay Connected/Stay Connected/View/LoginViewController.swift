@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupLoginScreen()
         bindViewModel()
+        
     }
 
     private func setupLoginScreen() {
@@ -103,8 +104,8 @@ class LoginViewController: UIViewController {
         viewModel.login { [weak self] success in
             if success {
                 // Navigate to QuestionnaireViewController
-                let questionnaireVC = QuestionnaireViewController()
-                self?.navigationController?.pushViewController(questionnaireVC, animated: true)
+                let mainTabBarController = MainTabBarController()
+                self?.navigationController?.pushViewController(mainTabBarController, animated: true)
             } else {
                 self?.showAlert(title: "Login Failed", message: self?.viewModel.errorMessage ?? "Unknown error")
             }
