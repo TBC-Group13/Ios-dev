@@ -1,3 +1,4 @@
+
 //
 //  QuestionTableViewCell.swift
 //  Stay Connected
@@ -79,11 +80,11 @@ class QuestionTableViewCell: UITableViewCell {
             tagTitleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             tagTitleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
             tagTitleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            
+
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            titleLabel.topAnchor.constraint(equalTo: tagTitleLabel.topAnchor, constant: 16),
-           
+            titleLabel.topAnchor.constraint(equalTo: tagTitleLabel.bottomAnchor, constant: 16),
+
             tagsLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             tagsLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             tagsLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
@@ -95,12 +96,10 @@ class QuestionTableViewCell: UITableViewCell {
         ])
     }
 
-    func configure(with question: Question, tagTitle: String, repliesCount: Int) {
+    func configure(with question: QuestionResponse, tagTitle: String, repliesCount: Int) {
         titleLabel.text = question.title
         tagsLabel.text = question.tags.joined(separator: ", ")
         tagTitleLabel.text = tagTitle
         repliesLabel.text = "Replies: \(repliesCount)"
     }
 }
-
-

@@ -18,7 +18,6 @@ class SplashViewController: UIViewController {
     private func setupSplashScreen() {
         view.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.64, alpha: 1.0) // #4E53A2
 
-        // Add hotspot icon
         let hotspotIcon = UIImageView()
         hotspotIcon.translatesAutoresizingMaskIntoConstraints = false
         hotspotIcon.image = UIImage(systemName: "personalhotspot")
@@ -26,7 +25,6 @@ class SplashViewController: UIViewController {
         hotspotIcon.contentMode = .scaleAspectFit
         view.addSubview(hotspotIcon)
 
-        // Add title label
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "Stay Connected"
@@ -35,7 +33,6 @@ class SplashViewController: UIViewController {
         titleLabel.textAlignment = .center
         view.addSubview(titleLabel)
 
-        // Constraints
         NSLayoutConstraint.activate([
             hotspotIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             hotspotIcon.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
@@ -48,7 +45,6 @@ class SplashViewController: UIViewController {
     }
 
     private func animateSplashScreen() {
-        // Add fade-in animation to the icon
         if let hotspotIcon = view.subviews.first(where: { $0 is UIImageView }) {
             hotspotIcon.alpha = 0
             UIView.animate(withDuration: 1.5, animations: {
@@ -56,7 +52,6 @@ class SplashViewController: UIViewController {
             })
         }
 
-        // Transition after 3 seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.moveToLoginPage()
         }

@@ -6,7 +6,6 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     private let viewModel = HomeViewModel()
     private var cancellables = Set<AnyCancellable>()
 
-
     private let tableView = UITableView()
 
     private let questionsLabel: UILabel = {
@@ -16,7 +15,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         label.textAlignment = .left
         return label
     }()
-    
+
     private let addButton: UIButton = {
         let button = UIButton()
         button.setTitle("+", for: .normal)
@@ -27,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         button.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         return button
     }()
-    
+
     private let generalButton: UIButton = {
         let button = UIButton()
         button.setTitle("General", for: .normal)
@@ -37,7 +36,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         button.setTitleColor(.white, for: .normal)
         return button
     }()
-    
+
     private let personalButton: UIButton = {
         let button = UIButton()
         button.setTitle("Personal", for: .normal)
@@ -47,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         button.setTitleColor(.white, for: .normal)
         return button
     }()
-    
+
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search"
@@ -56,12 +55,21 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         searchBar.searchTextField.leftView?.tintColor = UIColor(white: 0.6, alpha: 1)
         return searchBar
     }()
-    
+
+    private let noDataLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No questions available"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textAlignment = .center
+        label.textColor = .gray
+        label.isHidden = true
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
-       viewModel.fetchQuestions()
         self.navigationItem.hidesBackButton = true
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -92,7 +100,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         tableView.estimatedRowHeight = 80
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        
+
+        noDataLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(noDataLabel)
+
         NSLayoutConstraint.activate([
             questionsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
             questionsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
@@ -103,12 +114,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             addButton.widthAnchor.constraint(equalToConstant: 32),
             addButton.heightAnchor.constraint(equalToConstant: 32),
-            
+
             generalButton.topAnchor.constraint(equalTo: questionsLabel.bottomAnchor, constant: 20),
             generalButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             generalButton.widthAnchor.constraint(equalToConstant: 180),
             generalButton.heightAnchor.constraint(equalToConstant: 39),
-            
+
             personalButton.topAnchor.constraint(equalTo: questionsLabel.bottomAnchor, constant: 20),
             personalButton.leadingAnchor.constraint(equalTo: generalButton.trailingAnchor, constant: 10),
             personalButton.widthAnchor.constraint(equalToConstant: 170),
@@ -122,7 +133,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+
+            noDataLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            noDataLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
@@ -133,8 +147,9 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     private func bindViewModel() {
         viewModel.$questions
             .receive(on: RunLoop.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] questions in
                 self?.tableView.reloadData()
+                self?.noDataLabel.isHidden = !questions.isEmpty
             }
             .store(in: &cancellables)
 
@@ -159,6 +174,7 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell else {
             return UITableViewCell()
         }
