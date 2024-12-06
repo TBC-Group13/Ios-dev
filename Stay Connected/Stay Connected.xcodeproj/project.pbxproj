@@ -208,6 +208,9 @@
 			);
 			mainGroup = 5A98BDD12CFC3BE100067DDE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5AF72AB52D00C626000EA5D4 /* XCRemoteSwiftPackageReference "NetworkPackage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5A98BDDB2CFC3BE100067DDE /* Products */;
 			projectDirPath = "";
@@ -565,6 +568,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5AF72AB52D00C626000EA5D4 /* XCRemoteSwiftPackageReference "NetworkPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sandromaraneli/NetworkPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 5A98BDD22CFC3BE100067DDE /* Project object */;
 }
