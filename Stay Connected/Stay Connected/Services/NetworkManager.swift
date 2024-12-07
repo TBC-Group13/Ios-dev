@@ -1,7 +1,6 @@
 import Foundation
 import Combine
 
-// MARK: - HTTPMethod & NetworkError
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -36,7 +35,6 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    /// A generic request method for any Decodable type `T`.
     func request<T: Decodable>(
         urlString: String,
         method: HTTPMethod = .get,
@@ -52,14 +50,12 @@ class NetworkManager {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         
-        // Add headers if provided
         if let headers = headers {
             for (key, value) in headers {
                 urlRequest.setValue(value, forHTTPHeaderField: key)
             }
         }
         
-        // Handle parameters
         if let parameters = parameters {
             switch method {
             case .get:
@@ -82,25 +78,21 @@ class NetworkManager {
         }
         
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            // Handle client-side errors (e.g., no network)
             if let error = error {
                 completion(.failure(.requestFailed(error)))
                 return
             }
             
-            // Validate HTTP status code
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(.invalidResponse))
                 return
             }
             
-            // Validate data presence
             guard let data = data else {
                 completion(.failure(.invalidResponse))
                 return
             }
             
-            // Debug: Print raw JSON response in debug mode
             #if DEBUG
             if let jsonString = String(data: data, encoding: .utf8) {
                 print("----- RAW RESPONSE -----")
@@ -109,7 +101,6 @@ class NetworkManager {
             }
             #endif
             
-            // Attempt to decode the response
             do {
                 let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(decodedResponse))
@@ -125,7 +116,7 @@ class NetworkManager {
         }.resume()
     }
     
-    /// Login API Call
+    //Login API Call
     func login(parameters: [String: Any], completion: @escaping (Result<String, NetworkError>) -> Void) {
         let urlString = "http://ec2-18-198-208-73.eu-central-1.compute.amazonaws.com/api/login/"
         
@@ -140,7 +131,7 @@ class NetworkManager {
         }
     }
     
-    /// Registration API Call
+    //Registration API Call
     func registerUser(parameters: [String: Any], completion: @escaping (Result<String, NetworkError>) -> Void) {
         let urlString = "http://ec2-18-198-208-73.eu-central-1.compute.amazonaws.com/api/register/"
         

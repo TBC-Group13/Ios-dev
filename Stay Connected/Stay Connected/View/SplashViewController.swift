@@ -16,7 +16,7 @@ class SplashViewController: UIViewController {
     }
 
     private func setupSplashScreen() {
-        view.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.64, alpha: 1.0) // #4E53A2
+        view.backgroundColor = UIColor(red: 0.31, green: 0.33, blue: 0.64, alpha: 1.0) 
 
         let hotspotIcon = UIImageView()
         hotspotIcon.translatesAutoresizingMaskIntoConstraints = false

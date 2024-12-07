@@ -17,7 +17,6 @@ class LoginViewModel {
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        // Enable login button only when email and password are not empty
         Publishers.CombineLatest($email, $password)
             .map { !$0.isEmpty && !$1.isEmpty }
             .assign(to: \.isLoginEnabled, on: self)
