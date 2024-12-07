@@ -33,7 +33,7 @@ enum NetworkError: Error, LocalizedError {
 
 class NetworkManager {
     static let shared = NetworkManager()
-    private init() {}
+     init() {}
     
     func request<T: Decodable>(
         urlString: String,
