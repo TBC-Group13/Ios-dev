@@ -154,8 +154,8 @@ class SignUpViewController: UIViewController {
         NetworkManager.shared.registerUser(parameters: parameters) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let message):
-                    self?.showAlert(title: "Success", message: message)
+                case .success(let response):
+                    self?.showAlert(title: "Success", message: response.message)
                 case .failure(let error):
                     self?.showAlert(title: "Error", message: error.localizedDescription)
                 }

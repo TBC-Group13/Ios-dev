@@ -1,3 +1,5 @@
+
+
 //
 //  ProfileViewController.swift
 //  Stay Connected
@@ -23,9 +25,7 @@ final class ProfileViewController: UIViewController {
     
     private let logoutButton = UIButton()
     
-    private let networkService = NetworkManager()
-    
-    
+    private let networkManager = NetworkManager.shared // Use the shared instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,7 @@ final class ProfileViewController: UIViewController {
         setupUI()
         self.navigationItem.hidesBackButton = true
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        fetchProfileData() // Fetch profile data on view load
     }
     
     private func setupUI() {
@@ -165,15 +162,48 @@ final class ProfileViewController: UIViewController {
         ])
     }
     
-    @objc func labelTapped() {
+    @objc private func labelTapped() {
         print("Label was tapped")
     }
     
-    @objc func logoutButtonTapped() {
+    @objc private func logoutButtonTapped() {
         print("LogOut was tapped")
     }
-}
-#Preview {
-    MainTabBarController()
+    
+    private func fetchProfileData() {
+        networkManager.request(
+            urlString: "http://example.com/api/profile",
+            method: .get,
+            parameters: nil
+        ) { (result: Result<ProfileResponse, NetworkError>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let profile):
+                    self.updateUI(with: profile)
+                case .failure(let error):
+                    self.showError(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    private func updateUI(with profile: ProfileResponse) {
+        nameLabel.text = profile.name
+        emailLabel.text = profile.email
+        scoreValueLabel.text = "\(profile.score)"
+        answeredQuestionsValueLabel.text = "\(profile.answeredQuestions)"
+    }
+    
+    private func showError(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
 }
 
+struct ProfileResponse: Decodable {
+    let name: String
+    let email: String
+    let score: Int
+    let answeredQuestions: Int
+}

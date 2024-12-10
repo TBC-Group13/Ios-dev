@@ -1,15 +1,13 @@
 //
-//  RegisterResponse.swift
+//  LoginResponse.swift
 //  Stay Connected
 //
-//  Created by Giorgi Matiashvili on 06.12.24.
+//  Created by Giorgi Matiashvili on 10.12.24.
 //
-
 
 import Foundation
 
-struct RegisterResponse: Decodable {
-    let message: String
+struct LoginResponse: Decodable {
     let tokens: Tokens
     let user: User
 
